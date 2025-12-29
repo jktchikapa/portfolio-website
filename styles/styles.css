@@ -9,11 +9,6 @@
 html {
     scroll-behavior: smooth;
 }
-html,
-body {
-    height: 100%;
-}
-
 main {
     position: relative;
     z-index: 1;
@@ -26,8 +21,20 @@ a {
 body {
     font-family: "Playfair Display", serif;
 }
-section {
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 0 24px rgba(149, 157, 165, 0.2);
+    padding: 1rem;
+}
+
+section:not(.projects-section) {
     margin-top: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    padding: 2rem;
 }
 section:not(.projects-section) h2 {
     margin-bottom: 2rem;
@@ -39,18 +46,9 @@ section:not(.projects-section) h2 {
         opacity 0.6s ease,
         transform 0.6s ease;
 }
-
 .box.visible {
     opacity: 1;
     transform: translateY(0);
-}
-.featured-img {
-    filter: grayscale(100%) !important;
-    transition: all 0.3 ease;
-}
-.featured-img:hover {
-    filter: grayscale(0) !important;
-    transform: translateY(-6px);
 }
 .projects-container {
     position: relative;
@@ -67,8 +65,9 @@ section:not(.projects-section) h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color:black;
+    color: black;
     background-color: white;
+    box-shadow: 0 0 24px rgba(149, 157, 165, 0.2);
 }
 .project-1 {
     top: 20px;
@@ -82,4 +81,46 @@ section:not(.projects-section) h2 {
 }
 .project-4 {
     top: 80px;
+}
+.footer-complete {
+    background-color: #000;
+    color: white;
+    padding: 60px 0 20px;
+}
+.footer-complete h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.footer-complete ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-complete ul li {
+    margin-bottom: 10px;
+}
+.footer-complete ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.footer-complete ul li a:hover {
+    color: white;
+    padding-left: 5px;
+}
+.footer-complete .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+.footer-complete .social-icon:hover {
+    background: #ccc;
+    transform: translateY(-3px);
 }

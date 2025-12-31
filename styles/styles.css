@@ -215,7 +215,7 @@ section:not(.hero-section, .projects-section) {
 
 .featured-img {
     width: 100%;
-    height: 400px;
+    height: 400px;l
     object-fit: cover;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
